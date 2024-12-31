@@ -1,0 +1,16 @@
+
+import { StatCards } from "./StatCard";
+import { ActivityGraph } from "./ActivityGraph";
+import { UsageRadar } from "./UsageRadar";
+import { RecentTransactions } from "./RecentTransaction";
+
+export const Grid = () => {
+  return (
+    <div className="px-4 grid gap-3 grid-cols-12">
+      <StatCards />
+      <ActivityGraph />
+      <UsageRadar />
+      <RecentTransactions />
+    </div>
+  );
+};
