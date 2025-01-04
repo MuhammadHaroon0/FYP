@@ -29,7 +29,7 @@ function Analytics() {
 
   ];
   return (
-    <div className="flex flex-col space-y-6">
+    <div className="flex flex-col space-y-6 ">
       <div className="grid grid-cols-1 md:grid-cols-7 gap-4 items-center w-full">
         <div className="md:col-span-2">
 
@@ -78,7 +78,7 @@ const GraphsComponent: React.FC<GraphsComponentProps> = ({ title, components }) 
 
 
   return (
-    <div className="p-3 flex flex-col rounded-md gap-3 text-black">
+    <div className="p-3 bg-white flex flex-col rounded-md gap-3 text-black">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h1 className="text-lg font-medium">{title}</h1>

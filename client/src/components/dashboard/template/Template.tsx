@@ -24,11 +24,11 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
         <div className="relative">
           <NavBar />
           <div
-            className="overflow-y-auto h-screen flex flex-col"
+            className="overflow-y-auto h-screen flex flex-col bg-white"
             ref={contentRef}
           >
             <div
-              className="flex-shrink-0 p-5  max-md:p-3 bg-white h-full"
+              className="flex-shrink-0 p-5  max-md:p-3  h-full"
               style={{ marginTop: 72 }}
             >
               {children}

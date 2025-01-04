@@ -54,7 +54,8 @@ const Navbar: React.FC = () => {
                                 label="Resources"
                                 items={[{ label: 'Create Assessment', href: '/create-assessment' },
                                 { label: 'Invite Candidates', href: '/invite-candidates' },
-                                { label: 'Assessments', href: '/assessments' }]}
+                                { label: 'Assessments', href: '/assessments' },
+                                { label: 'Dashboard', href: '/dashboard' }]}
                             />
                         </div>
                     </div>

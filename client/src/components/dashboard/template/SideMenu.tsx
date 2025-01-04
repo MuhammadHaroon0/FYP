@@ -3,20 +3,23 @@ import { Link, useLocation } from "react-router-dom";
 import { GrBarChart } from "react-icons/gr";
 import logo from "../../../assets/logo.png";
 
-import { GoPersonAdd } from "react-icons/go";
 import { AiOutlineHome } from "react-icons/ai";
+import { PiStudent } from "react-icons/pi";
+import { VscOrganization } from "react-icons/vsc";
 
 const Header: React.FC = () => {
   const headerHeight = "72px";
 
   return (
-    <div
-      className="flex lg:space-x-3 justify-between lg:px-8 border-b border-gray-300 items-center p-2"
-      style={{ height: headerHeight }}
-    >
-      <img src={logo} alt="logo" />
+    <Link to={'/'}>
+      <div
+        className="flex lg:space-x-3 justify-between lg:px-8 border-b border-gray-300 items-center p-2"
+        style={{ height: headerHeight }}
+      >
+        <img src={logo} alt="logo" />
 
-    </div>
+      </div>
+    </Link>
   );
 };
 
@@ -83,7 +86,7 @@ const SideMenu: React.FC = () => {
           title="Students"
           active={location.pathname === "/dashboard/students"}
         >
-          <GrBarChart className={itemIconClass} />
+          <PiStudent className={itemIconClass} />
         </MenuItem>
 
         <MenuItem
@@ -91,7 +94,7 @@ const SideMenu: React.FC = () => {
           title="Companies"
           active={location.pathname === "/dashboard/companies"}
         >
-          <GoPersonAdd className={itemIconClass} />
+          <VscOrganization className={itemIconClass} />
         </MenuItem>
       </ul>
     </div>

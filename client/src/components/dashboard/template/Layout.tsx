@@ -6,7 +6,7 @@ const Layout: React.FC = () => {
     return (
         <div>
             <Template>
-                <div className='bg-white'>
+                <div className='bg-white w-full h-full'>
 
                     <Outlet />
                 </div>

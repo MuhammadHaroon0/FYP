@@ -10,21 +10,19 @@ import CreateQuizPage from "./pages/CreateQuizPage";
 import InviteCandidatesPage from "./pages/InviteCandidates";
 import Assessments from "./pages/Assesments";
 import IndividualAssessmentPage from "./pages/AssessmentPage";
-import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
 import Interview from "./pages/Interview";
 import MainLayout from "./MainLayout";
-import Template from "./components/dashboard/template/Template";
 import Students from "./components/dashboard/pages/Students/Students";
 import Companies from "./components/dashboard/pages/Companies/Companies";
 import Analytics from "./components/dashboard/pages/Analytics/Analytics";
 import Layout from "./components/dashboard/template/Layout";
+import Pricing from "./pages/Pricing";
 
 
 const App: React.FC = () => {
   return (
     <div className='bg-richblack-900 text-richblack-25'>
-
 
       <Routes>
         <Route path="/" element={
@@ -41,7 +39,6 @@ const App: React.FC = () => {
           <MainLayout>
             <Signup />
           </MainLayout>
-
         } />
         <Route path="/contact-us" element={
           <MainLayout>
@@ -73,11 +70,24 @@ const App: React.FC = () => {
             <IndividualAssessmentPage />
           </MainLayout>
         } />
+        <Route path="/pricing" element={
+          <MainLayout>
+            <Pricing />
+          </MainLayout>
+        } />
 
+
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/interview" element={<Interview />} />
+
+
+        {/* Admin and performance report routes */}
         <Route path="/dashboard" element={
           <Layout />
-
         } >
+          <Route path="#" element={
+            <Analytics />
+          } />
           <Route path="students" element={
             <Students />
           } />
@@ -90,8 +100,6 @@ const App: React.FC = () => {
 
         </Route>
 
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/interview" element={<Interview />} />
 
 
       </Routes>
