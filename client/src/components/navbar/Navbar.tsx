@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                             <NavItem label="Home" link="/" />
                             <NavItem label="About Us" link="/about-us" />
                             <NavItem label="Pricing" link="/pricing" />
-                            <NavItem label="Contact us" link="contact-us" />
+                            <NavItem label="Contact us" link="/contact-us" />
 
 
                             <Dropdown
@@ -97,22 +97,24 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
 
-            <div className={`${isOpen ? 'max-h-96' : 'max-h-0'} md:hidden overflow-hidden transition-all duration-300 ease-in-out absolute w-full z-50`}>
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className={`${isOpen ? 'max-h-96' : 'max-h-0'} md:hidden overflow-hidden transition-all duration-300 ease-in-out absolute w-full z-50 bg-richblack-700`}>
+                <div className="p-4 space-y-2 sm:px-3">
                     <div className="flex flex-col">
                         <NavItem label="Home" link="/" />
-                        <NavItem label="About Us" link="/aboutus" />
-                        <NavItem label="Find a tutor" link="#" />
+                        <NavItem label="About Us" link="/about-us" />
+                        <NavItem label="Create Assessment" link="/create-assessment" />
                     </div>
-                    <div className="flex flex-col md:ml-6 space-y-2">
+                    <div className="flex flex-col space-y-2">
                         <div className="w-24 h-10">
-                            <button className="rounded-full py-1 border-[1px] border-white bg-secondary w-full h-full text-white font-normal text-sm">
-                                Login
-                            </button>
+                            <Link to='/login'>
+                                <button className="rounded-full py-1 hover:opacity-75 bg-primary w-full h-full text-white font-normal text-sm">
+                                    Login
+                                </button>
+                            </Link>
                         </div>
-                        <div className="w-24 h-10">
-                            {/* <Button label="Signup" classNames="rounded-full" small /> */}
-                        </div>
+                        {/* <div className="w-24 h-10">
+                            <Button label="Signup" classNames="rounded-full" small />
+                        </div> */}
                     </div>
                 </div>
             </div>

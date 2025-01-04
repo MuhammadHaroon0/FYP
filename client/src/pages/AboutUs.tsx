@@ -3,12 +3,7 @@ import BannerImage2 from '../assets/aboutus2.webp'
 import BannerImage3 from '../assets/aboutus3.webp'
 import HighlightText from '../components/home/HighlightText'
 import Quote from '../components/about/Quote'
-import Stats from '../components/about/Stats'
-import LearningGrid from '../components/about/LearningGrid'
 import ContactFormSection from '../components/about/ContactFormSection'
-// import Footer from '../components/common/Footer'
-import FoundingStory from "../assets/FoundingStory.png"
-// import ReviewSlider from '../components/common/ReviewSlider'
 import Lottie from 'lottie-react'
 import lottieAnimation from '../data/lottieAnimation.json'
 
@@ -20,9 +15,8 @@ const Aboutus = () => {
             {/* Section 1 */}
             <section className=' bg-richblack-800 pb-5 lg:pb-0'>
 
-                <div className='w-11/12 mx-auto pt-[80px] flex flex-col items-center'>
+                <div className='w-11/12 mx-auto pt-[60px] flex flex-col items-center'>
 
-                    <p className=' text-richblack-200 text-base'>About Us</p>
 
                     <header className='lg:w-[70%] mt-[50px] mb-[40px]  flex flex-col text-[36px] leading-snug font-semibold text-center items-center'>
                         Driving Innovation in Online Education for a
@@ -53,7 +47,7 @@ const Aboutus = () => {
                 <div className="flex flex-col border-t border-richblack-700">
                     {/* Founding Story Section */}
                     <div className="flex">
-                        <div className="flex flex-col l lg:flex-row lg:py-24 py-12 lg:px-32 px-5 lg:gap-24 gap-10">
+                        <div className="flex flex-col l lg:flex-row py-12 lg:px-32 px-5 lg:gap-24 gap-10">
                             {/* Text Section */}
                             <div className="lg:w-1/2 mt-6 lg:mt-20">
                                 <h1 className="text-6xl text-center lg:text-left">
@@ -85,7 +79,7 @@ const Aboutus = () => {
                     </div>
 
                     {/* Vision and Mission Section */}
-                    <div className="flex flex-col lg:flex-row lg:py-24 py-12 lg:px-32 px-5 lg:gap-24 gap-10">
+                    <div className="flex flex-col lg:flex-row py-12 lg:px-32 px-5 lg:gap-24 gap-10">
                         {/* Vision Section */}
                         <div>
                             <h2 className="text-center lg:text-start">
@@ -116,7 +110,6 @@ const Aboutus = () => {
 
             {/* Section 5 */}
             <section className=' mx-auto flex flex-col items-center justify-between gap-5 py-[90px]'>
-                <LearningGrid />
                 <ContactFormSection />
             </section>
 

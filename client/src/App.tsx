@@ -14,6 +14,11 @@ import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
 import Interview from "./pages/Interview";
 import MainLayout from "./MainLayout";
+import Template from "./components/dashboard/template/Template";
+import Students from "./components/dashboard/pages/Students/Students";
+import Companies from "./components/dashboard/pages/Companies/Companies";
+import Analytics from "./components/dashboard/pages/Analytics/Analytics";
+import Layout from "./components/dashboard/template/Layout";
 
 
 const App: React.FC = () => {
@@ -68,7 +73,23 @@ const App: React.FC = () => {
             <IndividualAssessmentPage />
           </MainLayout>
         } />
-        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/dashboard" element={
+          <Layout />
+
+        } >
+          <Route path="students" element={
+            <Students />
+          } />
+          <Route path="companies" element={
+            <Companies />
+          } />
+          <Route path="analytics" element={
+            <Analytics />
+          } />
+
+        </Route>
+
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/interview" element={<Interview />} />
 

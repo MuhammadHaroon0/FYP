@@ -28,10 +28,9 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
     ctnbtn1,
     codeblock,
     backgroundGradient,
-    codeColor,
 }) => {
     return (
-        <div className={`flex ${position} my-20 justify-between flex-col gap-10`}>
+        <div className={`flex ${position} my-20 justify-between items-center flex-col gap-10`}>
             {/* Section1 */}
             <div className='w-full lg:w-[50%] flex flex-col gap-8 text-center md:text-left items-center lg:items-start '>
                 {heading}
