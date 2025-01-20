@@ -28,8 +28,8 @@ router.route("/getCandidatesFromCompany")
 router.route("/getCandidatesBasedOnJobDescription/:id")
     .get(protect, restriction("company"), isOwner, getCandidatesBasedOnJobDescription)
 
-router.route('/getCandidateQuiz').get(getCandidateQuiz)
-router.route('/getCandidateInterview').get(getCandidateInterview)
+router.route('/getCandidateQuiz').get(getCandidateQuiz) //give the token in query 
+router.route('/getCandidateInterview').get(getCandidateInterview)  //give the token in query 
 
 router.route("/:id")
     .get(protect, getOne(companyModel))

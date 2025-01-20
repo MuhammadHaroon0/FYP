@@ -29,7 +29,7 @@ const Interview: React.FC = () => {
             </div>
 
             {/* Right Half - Video + Timer */}
-            <div className="flex flex-col h-full items-center justify-between p-6 bg-gray-200">
+            <div className="flex flex-col h-full items-center justify-between p-6">
                 {/* Video Camera */}
                 <div className="w-full h-2/3 bg-black rounded-md border border-primary mb-4">
                     <video className="w-full h-full" autoPlay playsInline muted></video>
